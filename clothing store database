@@ -1,0 +1,31 @@
+-Create a clothing store database
+
+
+CREATE TABLE clothing_store (id INTEGER PRIMARY KEY, name TEXT,style TEXT, cost INTEGER, production_cost INTEGER);
+
+INSERT INTO clothing_store VALUES (1, "sweat pants", "bottoms", 15, 10);
+INSERT INTO clothing_store VALUES (2, "leggings", "bottoms", 18, 13);
+INSERT INTO clothing_store VALUES (3, "sweat shirt", "tops", 20, 8);
+INSERT INTO clothing_store VALUES (4, "T-shirt", "tops", 14,7);
+INSERT INTO clothing_store VALUES (5, "Tennis shoes", "shoes", 35, 26);
+INSERT INTO clothing_store VALUES (6, "boxer breifs", "underwear", 12, 6);
+INSERT INTO clothing_store VALUES (7, "panties", "underwear", 10, 4);
+INSERT INTO clothing_store VALUES (8, "jacket", "tops", 30, 22);
+INSERT INTO clothing_store VALUES (9,"tank tops", "tops", 12, 7);
+INSERT INTO clothing_store VALUES (10, "swimming trunks", "bottoms", 22, 14);
+INSERT INTO clothing_store VALUES (11, "sandals", "shoes", 20, 12);
+INSERT INTO clothing_store VALUES (12, "jeans", "bottoms", 40, 28);
+INSERT INTO clothing_store VALUES (13, "button-down", "tops", 30, 22);
+INSERT INTO clothing_store VALUES (14, "loafers", "shoes", 40, 27);
+INSERT INTO clothing_store VALUES (15, "basketball shorts", "bottoms", 15, 8);
+
+SELECT * FROM clothing_store;
+
+--Display the items ordered by price
+SELECT * FROM clothing_store ORDER BY cost ASC;
+
+--What is the avg price of the clothes in the bottoms section?
+SELECT AVG cost FROM clothing_store WHERE style= "bottoms";
+
+--What are the 5 items of clothing that are the cheapest to produce?
+SELECT * FROM clothing_store ORDER BY production_cost asc limit 5;
